@@ -15,3 +15,5 @@ ffmpeg
 tenacity
 pyrogram
 tgcrypto
+flask
+gunicorn
