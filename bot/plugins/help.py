@@ -42,6 +42,35 @@ def map(pos):
         button = [
             [
              InlineKeyboardButton(text = 'Support Chat', url = SUPPORT_CHAT_LINK),
+
+                help_text = """
+**📝 Bot Commands List**
+
+🔹 **General**
+- `/start` → Start the bot
+- `/help` → Show this help message
+
+🔹 **Merge Files**
+- `/merge_start` → Start collecting files to merge
+- `/merge_end` → Merge the collected files into one
+
+🔹 **Zip Files**
+- `/zip_start` → Start collecting files for ZIP
+- `/zip_end` → Create ZIP file
+
+🔹 **Audio Tools**
+- `/remove_audio` → Remove audio from a given video
+
+🔹 **Google Drive**
+- `/gdup` → Upload to Google Drive
+- `/setgd` → Set Google Drive Folder ID
+- `/gd_id` → Show current Google Drive Folder ID
+
+🔹 **Other**
+- `/showthumb` → Show your thumbnail
+- `/setthumb` → Set custom thumbnail
+- `/delthumb` → Delete thumbnail
+"""
              InlineKeyboardButton(text = 'Feature Request', url = "https://github.com/viperadnan-git/google-drive-telegram-bot/issues/new")
             ],
             [InlineKeyboardButton(text = '<--', callback_data = f"help+{pos-1}")]
