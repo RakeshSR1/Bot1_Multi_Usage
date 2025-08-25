@@ -84,3 +84,13 @@ def map(pos):
             ],
         ]
     return button
+
+from pyrogram import Client, filters
+from pyrogram.types import CallbackQuery
+
+@Client.on_callback_query()
+async def cb_handler(bot, query: CallbackQuery):
+    if query.data == "help_cmd":
+        await query.message.edit_text("📖 Help Menu\n\nUse /help to see all commands.")
+    elif query.data == "about_dev":
+        await query.message.edit_text("🤔 About Developer\n\nThis bot is made by @YourUsername ❤️")
